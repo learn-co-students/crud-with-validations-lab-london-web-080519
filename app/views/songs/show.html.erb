@@ -1,0 +1,15 @@
+<p>Title: <%= @song.title %></p>
+<p>Artist: <%= @song.artist_name %></p>
+<p>Release Year: <%= @song.release_year %></p>
+<p>Genre: <%= @song.genre %></p>
+
+
+
+<%= form_tag("/songs/#{@song.id}/edit", method: :get) do %>
+    <%= submit_tag("Edit song") %>
+<% end %>
+  
+<%= form_tag ( "/songs/#{@song.id}") do %>
+    <input type="hidden" name="_method" value="delete"/>
+    <%= submit_tag "Delete song" %>
+<% end %>

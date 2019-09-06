@@ -7,6 +7,15 @@
 </head>
 <body>
 
+<% if @song %>
+  <% if @song.errors %>
+    <% @song.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+<% end %>
+
+
 <%= yield %>
 
 </body>
