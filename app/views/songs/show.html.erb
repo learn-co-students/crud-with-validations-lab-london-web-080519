@@ -1,0 +1,12 @@
+<h3><%= @song.title %></h3>
+
+<ul>
+    <li><%= @song.title %></li>
+    <li><%= @song.released %></li>
+    <li><%= @song.release_year %></li>
+    <li><%= @song.artist_name %></li>
+    <li><%= @song.genre %></li>
+</ul>
+
+<%= link_to "Edit Song", edit_song_path %>
+<%= link_to "Delete", @song, method: :delete, data: { confirm: "Really?" } %>

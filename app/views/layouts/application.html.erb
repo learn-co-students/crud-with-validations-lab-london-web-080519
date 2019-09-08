@@ -7,6 +7,15 @@
 </head>
 <body>
 
+    <% if flash[:errors] %>
+    <ul class="errors">
+      <h2>Uh oh, something has gone wrong!</h2>
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul> 
+    <% end %>
+
 <%= yield %>
 
 </body>
